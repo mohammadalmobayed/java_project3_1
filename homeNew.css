@@ -1,0 +1,392 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+   
+  }
+
+  nav{
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    width: 90px;
+    background:#223463;
+    overflow:hidden;
+    transition:.5s;
+  }
+  
+  li {
+    
+      margin-bottom: 30px;
+  text-decoration: none;
+  }
+  nav:hover{
+    width:280px;
+    transition:1s;
+  }
+ .logo{
+    text-align: center;
+    display: flex;
+    margin-left:-7px;
+    
+    
+  }
+  
+  .logo img{
+    width: 80px;
+    height: 60px;
+    border-radius:50%;
+    margin-bottom: 30px;
+  }
+  .logo span{
+    font-weight: bold;
+    font-size: 20px;
+    text-transform:uppercase;
+    color: #E9F7FA;
+    
+  } 
+  a{
+    position:relative;
+    width: 200px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    display:table;
+    padding: 10px;
+    color: #E9F7FA;
+
+  }
+  nav .fa-solid{
+    position: relative;
+    width:70px;
+    height:50px;
+    top: 7px;
+    font-size: 20px;
+    text-align: center;
+    color: #E9F7FA;
+
+  }
+  .nav-item{
+    position: relative;
+    top:12px;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  a:hover{
+    background:rgb(159, 159, 159);
+    width: 280px;
+  }
+  a:hover i{
+    color:rgb(0, 0, 0);
+    transition: 0.5s;
+  }
+  .logout{
+    position:absolute;
+    bottom: 0;
+  }
+  .container{
+    display: flex;
+  }
+
+
+
+  /* 11111111111111111111111111111111111111111111111 */
+
+/* 11111111111111111111111111111111111111111111111 */
+.main {
+    display: flex;
+    flex-direction: column;
+   padding-top:  10px;
+    width: 100%;
+    
+
+}
+
+.main-top {
+    /* display:flex; */
+    width: 100%;
+    color:white;
+    text-align: start;
+    font-size: larger;
+    background-color:#223463;
+    font-weight: bolder;
+    height: 60px;
+   padding-top: 1%;
+   padding-left: 1%;
+}
+
+
+
+.main .user {
+    display: flex;
+    width: 100%;
+    
+}
+
+.user .card {
+    width: 50%;
+    margin: 10px;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 1px 3px 9px rgb(21, 119, 179);
+    
+}
+
+.user .card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.user .card h4 {
+    text-transform: uppercase;
+}
+
+.user .card p {
+    font-size:12px ;
+    margin-bottom:15px ;
+    text-transform: uppercase;
+}
+
+.user table {
+    margin: auto;
+}
+
+.user .per span {
+    padding: 5px;
+    border-radius: 10px;
+    background: rgb(223, 223, 223);
+}
+
+.user td {
+    font-size: 14px;
+    padding-right:15px;
+}
+
+.user .card button {
+    width: 60%;
+    margin-top: 20px;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid rgb(50, 71, 114);
+}
+
+.user .card button:hover {
+    background: rgb(103, 103, 128);
+    color: #fff;
+    transition: 0.5s;
+}
+
+
+
+.Orange {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 7% 0 5% 0%;
+}
+
+h1 {
+  color: rgb(213, 220, 230);
+  font-size: 40px;
+  background-color:rgb(50, 71, 114);
+  padding: 8px;
+  border-radius: 25px;
+  width:180px;
+  text-align: center;
+ 
+
+}
+body {
+  background-color: #E9F7FA;
+  background-color: #F2F2F2;
+}
+
+
+
+.content_Welcome {
+    margin: 0% 25% 0% 0%;
+    font-weight: 700;
+    color: #0f0f0f;
+    font-size: xx-large;
+    border: 2px solid #e7e7e7;
+    background-color: #7e93ab;
+
+}
+
+
+/* Newsss */
+
+#blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px;
+    /* margin-top: 10px; */
+    
+    box-shadow: 1px 3px 9px rgb(21, 119, 179);
+    background-image: url('./image/1acdc7a2-a363-40e2-a20e-876efbd441ba.jfif');
+    background-size:cover;
+}
+
+.blog-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blog-heading span {
+    color : rgb(59, 58, 113);
+}
+.blog-heading h3 {
+    font-size: 2.4rem;
+    color: rgb(50, 71, 114);
+    font-weight: 600;
+}
+.blog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+.blog-box {
+    width: 350px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 5%;
+    box-shadow: 1px 3px 9px rgb(21, 119, 179);
+
+
+}
+
+.blog-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+}
+
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5%;
+
+}
+.blog-text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.blog-text span {
+    color :rgb(5, 40, 110);;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.blog-text .blog-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: black;
+}
+.blog-text .blog-title:hover {
+    color: rgb(50, 71, 114);
+    transition: all ease 0.3;
+}
+.blog-text p {
+    color : #696a7d;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin : 20px 0px;
+}
+#blog3 {
+    width : 348px;
+    height: 260px;
+}
+.blog-text a {
+    color: #0f0f0f;
+}
+
+.blog-text a:hover {
+    color: #1f00b8;
+    font-weight: 580;
+    transition: all ease 0.3s;
+    scale: 1.1;
+}
+
+@media (max-width:1250px) {
+    .blog-box {
+        width :300px;
+    }
+}
+
+@media (max-width:1110px) {
+    .blog-box {
+        width :70%;
+    }
+}
+@media (max-width:550px) {
+    .blog-box {
+        margin : 20px 10px;
+        width :100%
+    }
+
+    #blog {
+        padding:20px;
+    }
+}
+
+
+/* Slides Section  */
+
+.slide {
+
+    background-color: rgb(255, 255, 255);
+}
+.slider {
+
+    width: 800px;
+    height: 400px;
+    background:url('./image/ora.png');
+    margin: 100px auto;
+    animation: slide 9s infinite;
+    overflow-x: hidden;
+
+}
+
+@keyframes slide {
+
+25% {
+    background: url('./image/coding-academy-photo.jpg');
+}
+
+50% {
+    background: url('./image/CODE1.jpg');
+}
+
+70% {
+    background: url('./image/CODE2.jpg');
+}
+
+100% {
+    background: url('./image/amro.jpeg');
+}
+
+
+}
+
+/* End Slides Section  *

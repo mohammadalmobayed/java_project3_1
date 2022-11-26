@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>profile</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="./salameh.css">
+</head>
+
+<body>
+     <!-- input Data Information  +icon for idet data -->
+    <div class="Salameh">
+        <!-- input pic user -->
+        <div>
+            <img id="profile_pic" src="../image/salameh.jpeg" alt="profile pic">
+        </div>
+          <!-- input information          -->
+        <div id="info_user">
+            <div>
+                <label>Name</label>
+                <br>
+                <input type="text" id="input_name" class="edit_info" value="Salameh Yasin" disabled="true">&nbsp;&nbsp;<button class="buttonICON"><i class="fa-solid fa-pen-to-square"  onclick="edit(input_name)"></i></button>
+
+                        
+            </div>
+            <br>
+            <div>
+                <label>Job Title</label>
+                <br>
+                <input type="text" id="input_departmint" class="edit_info" value="project Manager"
+                    disabled="true">&nbsp;&nbsp;<button class="buttonICON"><i class="fa-solid fa-pen-to-square"  onclick="edit(input_departmint)"></i></button>
+            </div>
+            <br>
+            <div>
+                <label>Job Department</label>
+                <br>
+
+                <input type="text" id="input_jopD" class="edit_info" value="Academy Manager at orange"
+                    disabled="true">&nbsp;&nbsp;<button class="buttonICON"><i class="fa-solid fa-pen-to-square"  onclick="edit(input_jopD)"></i></button>
+            </div>
+            <br>
+            <div>
+                <label>Email</label>
+                <br>
+                <input type="text" id="input_email" class="edit_info" value="salamehyasin@gmail.com"
+                    disabled="true">&nbsp;&nbsp;<button class="buttonICON"><i class="fa-solid fa-pen-to-square"  onclick="edit(input_email)"></i></button>
+            </div>
+            <br>
+            <div>
+                <label>Addres</label>
+                <br>
+                <input type="text" id="input_addres" class="edit_info" value="Amman-jordan" disabled="true">&nbsp;&nbsp;<button class="buttonICON"><i
+                    class="fa-solid fa-pen-to-square"  onclick="edit(input_addres)"></i></button>
+            </div>
+            <br>
+            <div>
+                <label>Description</label>
+                <br>
+                 <textarea id="input_desc" class="edit_info"  disabled="true" style="resize:none" ;>A highly resourceful, innovative, and competent PHP developer with extensive experience in the layout, design and coding of websites specifically in PHP format.</textarea>
+               
+                 &nbsp;&nbsp;<button class="buttonICON"> <i class="fa-solid fa-pen-to-square"  onclick="edit(input_desc)"></i></button>
+            </div>
+
+            <!-- button for save edit -->
+           <div><button id="save_edit" onclick="save_edit()">Save</button></div>
+        </div>
+    </div>
+    <script>
+        
+        document.getElementById("input_name").value = (JSON.parse(localStorage.getItem("informationS"))).new_name || "Salameh yasin" 
+        document.getElementById("input_departmint").value = (JSON.parse(localStorage.getItem("informationS"))).new_jopDepartment || "Project Manager " 
+        document.getElementById("input_jopD").value = (JSON.parse(localStorage.getItem("informationS"))).new_jopTitle || "Academy Manager at orange" 
+        document.getElementById("input_email").value = (JSON.parse(localStorage.getItem("informationS"))).new_Email || "salamehyasin@gmail.com" 
+        document.getElementById("input_addres").value = (JSON.parse(localStorage.getItem("informationS"))).new_Addres || "Amman-jordan" 
+        document.getElementById("input_desc").value = (JSON.parse(localStorage.getItem("informationS"))).new_description || "A highly resourceful, innovative, and competent PHP developer with extensive experience in the layout, design and coding of websites specifically in PHP format." 
+        // function for edit information
+        function edit(editor) {
+            let input = document.getElementById("editor");
+            editor.disabled = false;
+        }
+        
+        // function for save new data
+        let arrayinfoEdit= JSON.parse(localStorage.getItem("informationS"))|| [];
+        function save_edit()
+        {  
+            
+            let new_name=document.getElementById("input_name").value;
+            const new_jopTitle=document.getElementById("input_jopD").value;
+            const new_jopDepartment=document.getElementById("input_departmint").value;
+            const new_Email=document.getElementById("input_email").value;
+            const new_Addres=document.getElementById("input_addres").value;
+            const new_description=document.getElementById("input_desc").value;
+
+             let objInfo ={
+                new_name:new_name,
+                new_jopTitle:new_jopTitle,
+                new_jopDepartment:new_jopDepartment,
+                new_Email:new_Email,
+                new_Addres:new_Addres,
+                new_description:new_description  
+            }
+            // arrayinfoEdit.push(objInfo);
+            localStorage.setItem("informationS",JSON.stringify(objInfo));
+           
+           
+        }  //End Function save Data
+         
+        
+    </script>
+</body>
+
+</html>

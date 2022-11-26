@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./signUp.css">
+	<link rel="icon" href="./image/HAMD.png" type="image/icon type">
+</head>
+<body>
+	<div class="container" id="container">
+		<div class="form-container sign-up-container">
+ 
+			<!-- START for create account -->
+
+			<form action="#">
+				<h1>Create Account</h1>
+<span>or use your email for registration</span>
+<input  id="username" type="text" placeholder="Name" />
+<input  id="email" type="email" placeholder="Email" />
+<input  id="pass" type="password" placeholder="Password" />
+<input  id="passs" type="password" placeholder="RePassword" />
+
+<!-- <input  id="pass2" type="password" placeholder="RePassword" /> -->
+<p id="validp"> </p>
+<button  class="submitSginUp" onclick="checkData()">submit </button>
+</form>
+		</div>
+		<!-- End For Creat Your Acount  -->
+
+		<!-- start fo Sign iN  -->
+		<div class="form-container sign-in-container">
+			
+			<form>
+				<h1>Sign in</h1>
+				<span>or use your account</span>
+				<input id="email2" type="email" placeholder="Email" />
+				<input id="pass2" type="password" placeholder="Password" />
+				<a href="#">Forgot your password?</a>
+				<button  class="submitSginip" onclick="compareData()" type="submit">submit </button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1>Welcome Back!</h1>
+					<p>To keep connected with us please login with your personal info</p>
+					<button class="ghost" id="signIn">Sign In</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+					<h1>Hello, Friend!</h1>
+					<p>Enter your personal details and start journey with us</p>
+					<button class="ghost" id="signUp">Sign Up</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script>
+	
+	// function for check data
+  function checkData()
+
+  {
+	let arrayRej=JSON.parse(localStorage.getItem("infoUser"))||[];
+	let objRej={};
+	let checkErr=0;
+
+	let checkName =document.getElementById("username").value;
+	let checkEmail =document.getElementById("email").value;
+	let checkPassword =document.getElementById("pass").value;
+	let checkPassword2 =document.getElementById("passs").value;
+     
+	// let checkPassword2 =document.getElementById("pass2").value;
+        //  console.log(checkName);
+        //  console.log(checkEmail);
+        //  console.log(checkPassword);
+        //  console.log(checkPassword2);
+		
+		try{
+			if(!checkName.match(/^[a-z ,.'-]+$/i) ) throw " error name for information"
+			if(!checkPassword.match( /^((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]))/)  ) throw " error pas for information"
+			if(checkPassword!=checkPassword2) throw "error for  repassword "
+			if(!checkEmail.match("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")) throw " eroor email for information"
+		}
+		catch(error){
+		checkErr++;
+         let err=document.getElementById("validp");
+		 err.innerHTML=error;
+		}
+	 
+		 
+		if(checkErr==0)
+		{  
+			objRej={
+		Name:checkName,
+		Email:checkEmail,
+		Password:checkPassword
+	  }
+	  arrayRej.push(objRej);
+	  console.log(arrayRej);
+	  localStorage.setItem("infoUser",JSON.stringify(arrayRej));
+  } 
+  }
+ // function for compaire  
+
+function compareData()
+{
+	let arrayCombare=JSON.parse(localStorage.getItem("infoUser"))|| [];
+	let email2=document.getElementById("email2");
+ 	let pass2=document.getElementById("pass2");
+    localStorage.setItem("NewEmail",email2.value );
+    localStorage.setItem("NewPass",pass2.value );
+	
+    
+	arrayCombare.map (e =>{ 
+		console.log(e.Email);
+                                                            
+		if(e.Email==email2.value && e.Password==pass2.value)
+		{
+                     
+		window.location=("homeNew.html");
+			                               
+		}
+		        
+		else  {
+			console.log("soory");
+			
+		}
+		event.preventDefault();
+	})
+}    
+
+
+</script>
+   
+
+	<script src="./signUp.js"></script>
+</body>
+</html>

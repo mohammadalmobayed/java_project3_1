@@ -1,0 +1,207 @@
+* {
+    margin :0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+nav{
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    width: 90px;
+    background:#223463;
+    overflow:hidden;
+    transition:.5s;
+  }
+  
+  li {
+    
+      margin-bottom: 30px;
+      text-decoration: none;
+  }
+  nav:hover{
+    width:280px;
+    transition:1s;
+  }
+  .nav-item:hover{
+    font-weight: 700;
+  }
+ .logo{
+    text-align: center;
+    display: flex;
+    margin-left:-7px;
+    
+    
+  }
+  
+  .logo img{
+    width: 80px;
+    height: 60px;
+    border-radius:50%;
+    margin-bottom: 30px;
+  }
+  .logo span{
+    font-weight: bold;
+    font-size: 20px;
+    text-transform:uppercase;
+    color: #E9F7FA;
+    
+  } 
+  a{
+    position:relative;
+    width: 200px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    display:table;
+    padding: 10px;
+    color: #E9F7FA;
+
+  }
+  nav .fa-solid{
+    position: relative;
+    width:70px;
+    height:50px;
+    top: 7px;
+    font-size: 20px;
+    text-align: center;
+    color: #E9F7FA;
+
+  }
+  .nav-item{
+    position: relative;
+    top:12px;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  a:hover{
+    background:rgb(159, 159, 159);
+    width: 280px;
+    color: black;  
+  }
+  a:hover i{
+    color:rgb(0, 0, 0);
+    transition: 0.5s;
+  }
+  .logout{position:absolute;
+    bottom: 0;
+  }
+  .container{
+    display: flex;
+  }
+
+body {
+    background-color: #222;
+    color: azure;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.crud {
+    width: 80%;
+    margin: auto;
+}
+.head {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+input {
+    display: block;
+    width: 70%;
+    margin: 1% 0%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: #222;
+    border-radius: 4px;
+    padding: 8px;
+    color: #222;
+}
+
+input:focus {
+    background-color: rgb(174, 204, 206);
+    transform: scale(1.05);
+}
+
+
+
+button {
+    width: 70%;
+    height: 33px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(174, 204, 206);
+    color: black;
+    font-weight: 700;
+    border-radius: 20px;
+    transition: 0.5s;
+    margin-left: 15%;
+}
+
+button:hover{
+    background: rgb(140, 181, 192);
+    letter-spacing: 1px;
+}
+
+table {
+width: 100%;
+text-align: center;
+background-color:#223463 ;
+/* border: #fff 1px solid; */
+margin: 20px 0 ;
+}
+
+label {
+    /* font-weight: 500; */
+    font-size:14px ;
+    text-transform: capitalize;
+    margin-left: 7px;
+}
+
+table th {
+    text-transform: uppercase;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin: 20px 0;
+}
+td {
+    /* padding: 5px; */
+    color: #000000;
+    background-color: #223463;
+    margin:30px 10px
+    /* border: 1px solid #000; */
+}
+
+#Submit {
+    margin-top: 20px;
+}
+
+form {
+    background-color:#223463 ;
+    padding: 20px;
+}
+.cont{
+    margin-left: 250px;
+    margin-top: 35px;
+    height: 300px;
+}
+.cont input{
+    margin-bottom: 20px;
+}
+.cont textarea{
+    display: block;
+    margin: 10px 0;
+    max-height: 70px;
+    padding: 10px;
+    background-color: #222;
+}
+.cont textarea:focus {
+    background-color: rgb(174, 204, 206);
+    transform: scale(1.05);
+}
+/*/*

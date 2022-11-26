@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  /* body{
+    background-image: url(back1.jpg);
+  } */
+  nav{
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    width: 90px;
+    background:#223463;
+    overflow:hidden;
+    transition:.5s;
+  }
+  
+  li {
+    
+      margin-bottom: 30px;
+  text-decoration: none;
+  }
+  nav:hover{
+    width:280px;
+    transition:1s;
+  }
+ .logo{
+    text-align: center;
+    display: flex;
+    margin-left:-7px;
+    
+    
+  }
+  
+  .logo img{
+    width: 80px;
+    height: 60px;
+    border-radius:50%;
+    margin-bottom: 30px;
+  }
+  .logo span{
+    font-weight: bold;
+    font-size: 20px;
+    text-transform:uppercase;
+    color: #E9F7FA;
+    
+  } 
+  a{
+    position:relative;
+    width: 200px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    display:table;
+    padding: 10px;
+    color: #E9F7FA;
+
+  }
+  nav .fa-solid{
+    position: relative;
+    width:70px;
+    height:50px;
+    top: 7px;
+    font-size: 20px;
+    text-align: center;
+    color: #E9F7FA;
+
+  }
+  .nav-item{
+    position: relative;
+    top:12px;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  a:hover{
+    background:rgb(159, 159, 159);
+    width:90px;
+   padding-left: 18%;
+   border:solid 1px rgb(159, 159, 159);
+   border-radius: 5%;
+  }
+  a:hover i{
+    color:rgb(0, 0, 0);
+    transition: 0.5s;
+  }
+  .logout{
+    position:absolute;
+    bottom: 0;
+  }
+  .container{
+    display: flex;
+  }
+
+
+  /* 11111111111111111111111111111111111111111111111 */
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+}
+
+.Orange {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 7% 0 5% 0%;
+}
+.Orange p {
+    font-weight: 500;
+    line-height: 2.4;
+    font-family: 'Manrope', sans-serif;
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 10%;
+    color: rgb(24, 26, 26);
+    background-color: rgba(207, 221, 233, 0.5);
+    padding: 9px;
+}
+.Orange img {
+    border-radius: 50%;
+    box-shadow: 1px 3px 9px rgb(0, 0, 0);
+
+}
+.Orange h1 {
+        font-family: 'Annie Use Your Telescope', cursive;
+        font-size: xx-large;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+
+}
+
+.Goal {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 7%;
+
+}
+.Goal ul {
+  font-weight: 500;
+  line-height: 2.5;
+  font-family: 'Manrope', sans-serif;
+  text-align: start;
+  margin-right: 3%;
+  margin-left: 10%;
+}
+.Goal h1 {
+  margin-bottom: 20px;
+  font-family: 'Annie Use Your Telescope', cursive;
+  font-size: xx-large;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.Goal ul li {
+  padding: 5px;
+  color: #223463;
+  font-size: large;
+}
+
+.Goal img {
+  border-radius: 50%;
+  margin-left: 40%;
+width: 350px;
+height: 90%;
+box-shadow: 1px 3px 9px rgb(0, 0, 0);
+
+}
+
+
+/* ...................................... */
+
+.Cards {
+  display: grid;
+  grid-template-rows: repeat(2,1fr);
+  grid-template-columns: repeat(2,1fr);
+  width: 90%;
+  margin-left: 10%;
+  grid-row-gap: 20px;
+}
+
+.top h1 {
+text-align: center;
+font-weight:600;
+color: brown;
+}
+
+
+h1 {
+font-family: 'Annie Use Your Telescope', cursive;
+font-size:120px;
+text-align: center;
+align-items: center;
+justify-content: center;
+}
+
+.card {
+width: 75%;
+margin: 10px;
+background: #fff;
+text-align: center;
+border-radius: 10px;
+padding: 10px;
+box-shadow: 1px 3px 9px rgb(0, 0, 0);
+}
+
+.card img {
+width: 180px;
+height: 180px;
+border-radius: 50%;
+padding-top: 10px;
+}
+
+.card h4 {
+/* text-transform: uppercase; */
+font-size:large ;
+}
+
+.card span {
+font-size:large ;
+margin-bottom:15px ;
+/* text-transform: uppercase; */
+}
+
+.card button {
+  text-align: start;
+width: 50%;
+margin-top: 20px;
+margin-bottom: 20px;
+padding: 9px;
+padding-left: 17%;
+cursor: pointer;
+border-radius: 10px;
+background-color: #223463;
+background: transparent;
+border: 1px solid rgb(50, 71, 114);
+}
+
+.card button:hover {
+background: rgb(50, 71, 114);
+color: rgb(1, 1, 1);
+transition: 0.5s;
+}
+
+#buttonco
+{
+  color: black;
+}
+
+
+.partner {
+  margin-bottom: 8%;
+}
+.partner p {
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+  height: 150px;
+  margin-left: 5%;
+}
+
+.partner p img{
+  border-radius: 10%;
+  box-shadow: 1px 3px 9px rgb(0, 0, 0);
+  margin-bottom: 100px;
+}
+.partner h1 {
+padding: 50px;
+}
+#part {
+  margin: 0 45%;
+}
+.top h1 {
+  margin-bottom: 80px;
+  color: rgb(27, 58, 96);
+}
+
+h1 {
+  color: rgb(27, 58, 96);
+}
+body {
+  background-color: #E9F7FA;
+  background-color: #F2F2F2;
+}

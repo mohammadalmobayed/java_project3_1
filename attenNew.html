@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Attendence </title>
+    <script src="https://kit.fontawesome.com/3692f58ddc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./attenNEW.css">
+    <link rel="icon" href="../images/logo.png" type="image/icon type">
+
+</head>
+<body>
+    <div class="container">
+    <nav>
+             <a class="logo" style="background-color:#223463 ;">
+          <img src="./image/newLogo.jpeg">
+          <span class="nav-item">HAMS</span>
+        </a>
+            
+       
+        <ul style="list-style-type:none;">
+        <li><a href="./homeNew.html">
+          <i class="fa-solid fa-house"></i>
+          <span class="nav-item">Home </span>
+        </a></li>
+
+        <li><a href="./aboutUs.html">
+          <i class="fa-solid fa-user"></i>
+          <span class="nav-item">Profile</span>
+        </a></li>
+
+        <li><a href="./attenNew.html">
+          <i class="fa-solid fa-clipboard-user"></i>
+          <span class="nav-item">Students</span>
+        </a></li>
+
+        
+        <li><a href="./main.html" class="logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span class="nav-item">Log out</span>
+        </a></li>
+      </ul>
+</nav>
+   
+    <div class="crud">
+        <div class="head">
+            <h2> Attendence Table </h2>
+            <p> Tracker System </p>
+        </div>
+
+
+
+        <div class="inputs">
+
+            <form id="form" >
+                <div class="cont">
+                    
+                    <input type="text" class="inputinf" id="studentid" placeholder="ID" required>
+                
+                    
+                    <input type="text" class="inputinf"  id="StudentName" placeholder="Student Name" required>
+                
+                    
+                    <input type="email"  class="inputinf"  id="Email" placeholder="Email" required>
+                
+                 
+                 <input type="number" class="inputinf" id="AbsenceDays" placeholder="Absence days" required>
+             
+                 
+                 <input type="text"  class="inputinf"  id="Tasks" placeholder="Tasks" required >
+             
+                 <!-- <label>Feedback</label> -->
+                 <textarea id="Feedback" placeholder="Feedback" style="max-width: 690px;"></textarea>
+             </div>                
+            </form>
+        </div>
+
+        <div>
+            <button  class="submit"   id="Submit" >submit</button>
+        </div>
+
+
+
+
+        <div class="outputs">
+<!-- <div class="search">
+    <input type="text" id="search" placeholder="search">
+</div> -->
+
+<div id="DeletAll">
+    
+</div>
+
+<table>
+    <tr>
+        <th> ID </th>
+        <th> Name </th>
+        <th> Email </th>
+        <th> Absence Day</th>
+        <th> Task </th>
+        <!-- <th> All Task </th> -->
+        <th> Edit </th>
+        <th> Delete </th>
+    </tr>
+    <tbody id="tbody"> 
+</tbody>
+</table>
+
+</div>
+
+   </div>
+   </div>
+<script src="./attenNew.js"></script>
+</body>
+</html>
